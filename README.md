@@ -84,7 +84,7 @@ vim Makefile
 
 ```
 myfile.o: myfile.c
-    i686-elf-gcc -c myfile.c --ffreestanding -o myfile.o
+    i686-elf-gcc -c myfile.c -ffreestanding -o myfile.o
 ```
 
 - run a make
