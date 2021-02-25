@@ -41,12 +41,12 @@ vim ~/.profile
 - add this to the end of the Profile
 
 ```
-; if the directory exists add it to the path
+# if the directory exists add it to the path
 if [ -d "$HOME/.cross" ] ; then
     PATH="$HOME/.cross:$PATH"
 fi
 
-; if the directory exists add it to the path
+# if the directory exists add it to the path
 if [ -d "$HOME/.cross/bin" ] ; then
     PATH="$HOME/.cross/bin:$PATH"
 fi
@@ -84,7 +84,7 @@ vim Makefile
 
 ```
 myfile.o: myfile.c
-    i686-elf-gcc -c myfile.c --freestanding -o myfile.o
+    i686-elf-gcc -c myfile.c --ffreestanding -o myfile.o
 ```
 
 - run a make
