@@ -51,3 +51,44 @@ if [ -d "$HOME/.cross/bin" ] ; then
     PATH="$HOME/.cross/bin:$PATH"
 fi
 ```
+
+### Testing it works
+
+- Run the gcc and get the version
+
+```
+i686-elf-gcc --version
+```
+
+- make a new freestanding c file
+
+```
+vim myfile.c
+```
+
+- add some c code
+
+```C
+int main() {
+    return 0;
+}
+```
+
+- make a new Makefile
+
+```
+vim Makefile
+```
+
+- add a target to the makefile
+
+```
+myfile.o: myfile.c
+    i686-elf-gcc -c myfile.c --freestanding -o myfile.o
+```
+
+- run a make
+
+```
+make myfile.o
+```
